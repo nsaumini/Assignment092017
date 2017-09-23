@@ -1,0 +1,334 @@
+/*
+Theme Name: GrabJet
+Theme URI: 
+Description: This is GrabJet theme
+Author: Saumini
+Version: 1.0
+Tags: responsive, bootstrap, grab
+*/
+@charset "UTF-8";
+
+/* SCROLL BAR STYLES */
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* GENERAL STYLES */
+
+html, body {
+	height: 100%;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	font-family: Helvetica, sans-serif, Arial;
+	font-size: 14px;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.mobileCopy {
+	display:none !important;
+}
+	
+.desktopCopy {
+	display: block !important;
+}
+
+.wrapper {
+	max-width: 1030px;
+	margin: 0px auto;
+	position: relative;
+	background: url(assets/images/background.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+/* UNDERLINE FROM CENTER */
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+}
+
+.hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    background: #fff;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-underline-from-center:hover:before,
+.hvr-underline-from-center:focus:before,
+.hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+}
+
+/* NAVIGATION STYLES */
+
+/* navbar */
+.navbar-default {
+    background-color: #00C366;
+    border: none;
+}
+
+/* title */
+.navbar-default .navbar-brand {
+    color: #fff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+	color: #fff;
+ 	/*-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);*/
+}
+
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+/* mobile */
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/* MAIN CONTENT STYLES */
+
+.page-content, .login-content {
+	min-height: 550px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+}
+
+.page-content {
+	align-items: center;
+}
+
+.login-content label {
+	color: #fff;
+}
+
+#result {
+	color: red;
+	padding-bottom: 10px;
+}
+
+.page-content .form-control,
+.page-content .selectpicker {
+	min-height: 55px;
+}
+
+.btn-green,
+.btn-green:hover,
+.btn-green:active,
+.btn-green:visited,
+.btn-green:focus {
+    background-color: #7EE2AF;
+    border: none;
+    color: #fff;
+}
+
+.btn-book {
+	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#pickup {
+	border-radius: 4px 4px 0px 0px !important;
+}
+
+#dropoff {
+	border-radius: 0;
+}
+
+.addtional {
+	padding-right: 0px;
+}
+
+.datetime {
+	padding-left: 0px;
+}
+
+.datepicker {
+	cursor: pointer;
+}
+
+.ui-datepicker {
+	z-index: 3 !important;
+}
+
+button[data-id="pickup"] .filter-option:before {
+	content: "\00a0\00a0\00a0\00a0 PICK-UP";
+	font-size: 10px;
+	color: #C7C7CD;
+	width: 7px;
+	height: 88%;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	border-left: 2px solid #488be4;
+	border-right: 2px solid #488be4;
+	z-index: 2;
+}
+
+button[data-id="dropoff"] .filter-option:before {
+	content: "\00a0\00a0\00a0\00a0 DROP-OFF";
+	font-size: 10px;
+	color: #C7C7CD;
+	width: 7px;
+	height: 88%;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	border-left: 2px solid #ffaa9f;
+	border-right: 2px solid #ffaa9f;
+	z-index: 2;
+}
+
+
+button[data-id="pickup"] .filter-option,
+button[data-id="dropoff"] .filter-option {
+	margin-left: 10px;
+}
+
+/* FOOTER STYLES */
+
+footer {
+	background-color: #eee;
+	border-top: 1px solid #363A45;
+	padding: 10px 15px;
+	text-align: center;
+}
+
+footer a {
+	color: #363A45;
+	margin: 0px 15px;
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+footer a:hover {
+	color: #363A45;
+	text-decoration: none;
+}
+
+footer a:before {
+	background: #00C366 !important;
+}
+
+.box {
+	padding: 15px;
+}
+
+.box img {
+	padding: 20px;
+}
+
+.footer-menu {
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 50px;
+}
+
+@media screen and (max-width: 990px) {
+
+}
+
+@media screen and (max-width: 768px) {
+	.addtional {
+		padding-right: 15px;
+	}
+	
+	.datetime {
+		padding-left: 15px;
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media screen and (max-width: 560px) {
+	
+}
+
+@media screen and (max-width: 479px) {
+	footer {
+		padding: 10px 25px;
+		line-height: 25px;
+		margin-top: 20px;
+	}
+	
+	.addtional {
+		padding-right: 15px;
+	}
+	
+	.datetime {
+		padding-left: 15px;
+	}
+}
