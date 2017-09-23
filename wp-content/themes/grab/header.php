@@ -37,6 +37,10 @@
 						<li><a href="<?php get_home_url(); ?>" class="hvr-underline-from-center">GrabLimo</a></li>
 						<li><a href="<?php get_home_url(); ?>" class="hvr-underline-from-center">GrabCruise</a></li>
 						<li><a href="<?php get_home_url(); ?>" class="hvr-underline-from-center">GrabCopter</a></li>
+
+						<?php if (is_user_logged_in()) { ?>
+						<li><a href="<?php echo wp_logout_url(home_url()); ?>"><span class="glyphicon glyphicon-log-out"></span></a></li>
+						<?php } ?>
       				</ul>
     			</div>
 			</div>
