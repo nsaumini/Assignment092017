@@ -162,9 +162,6 @@ html, body {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	display: flex;
-}
-
-.page-content {
 	align-items: center;
 }
 
@@ -172,9 +169,12 @@ html, body {
 	color: #fff;
 }
 
-#result {
-	color: red;
-	padding-bottom: 10px;
+.error {
+	display: block;
+	width: 100%;
+	color: #D8000C;
+	padding: 10px;
+	text-align: center;
 }
 
 .page-content .form-control,

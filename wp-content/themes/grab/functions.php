@@ -22,4 +22,13 @@ function grabjet_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'grabjet_enqueue_styles');
 add_action('wp_enqueue_scripts', 'grabjet_enqueue_scripts');
 
+function redirect_to_login()
+{
+    if (! is_user_logged_in() && ! is_page('login')) {
+        wp_redirect(get_home_url().'/login');
+        exit;
+    }
+}
+add_action('template_redirect', 'redirect_to_login');
+
 ?>
