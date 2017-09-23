@@ -36,12 +36,12 @@
 
             			<div class="row">
                 			<div class="col-xs-12 col-sm-12 col-md-6 pull-left addtional">
-                				<select class="form-control selectpicker" name="additional">
-                					<option value="">Additional Service</option>
-                					<option value="fa">Flight Attendant (+ $300)</option>
-                					<option value="fk">Full Kitchen (+ $100)</option>
-                					<option value="m">Massage (+ $50)</option>
-                					<option value="j">Jacuzzi (+ $180)</option>
+                				<select class="form-control selectpicker" id="additional" name="additional">
+                					<option value="0">Additional Service</option>
+                					<option value="300">Flight Attendant (+ $300)</option>
+                					<option value="100">Full Kitchen (+ $100)</option>
+                					<option value="50">Massage (+ $50)</option>
+                					<option value="180">Jacuzzi (+ $180)</option>
                 				</select>
                 			</div>
 
@@ -55,7 +55,7 @@
                 				<button type="button" class="btn btn-green form-control btn-book">
                 					<strong>
                 						<span class="pull-left">Request a Jet</span>
-                						<span class="pull-right">$199</span>
+                						<span id="totalCost" class="pull-right">$199</span>
                 					</strong>
             					</button>
             				</div>
@@ -78,6 +78,13 @@ jQuery(document).ready(function($) {
     	timeFormat	: 'HH:mm',
     	autoClose	: true,
     	minDate		: tomorrow
+    });
+
+    $('#additional').change(function() {
+		var fixedCost = 199;
+		var additionalCost = parseInt($(this).val());
+
+		$('#totalCost').html('$'+(fixedCost + additionalCost));
     });
 });
 </script>
